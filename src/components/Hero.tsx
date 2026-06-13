@@ -26,9 +26,9 @@ export default function Hero() {
               t.style.display = 'none'
               t.nextElementSibling?.classList.remove('hidden')
             }}
-            className="relative h-36 w-36 rounded-full border-2 border-navy-700 object-cover md:h-40 md:w-40"
+            className="relative h-40 w-40 rounded-full border-2 border-navy-700 object-cover object-top md:h-44 md:w-44"
           />
-          <div className="relative hidden h-36 w-36 items-center justify-center rounded-full border-2 border-navy-700 bg-navy-800 font-mono text-4xl text-accent md:h-40 md:w-40">
+          <div className="relative hidden h-40 w-40 items-center justify-center rounded-full border-2 border-navy-700 bg-navy-800 font-mono text-4xl text-accent md:h-44 md:w-44">
             JA
           </div>
         </div>

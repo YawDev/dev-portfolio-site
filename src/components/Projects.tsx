@@ -1,6 +1,6 @@
-import { projects } from '../data/content'
-import Icon from './Icon'
-import Section from './Section'
+import { projects } from "../data/content";
+import Icon from "./Icon";
+import Section from "./Section";
 
 export default function Projects() {
   return (
@@ -11,6 +11,11 @@ export default function Projects() {
             <div className="mb-4 flex items-center justify-between">
               <Icon name="external" className="h-7 w-7 text-accent" />
               <div className="flex items-center gap-3">
+                {p.repos && p.repos.length > 0 && (
+                  <span className="font-mono text-xs text-ink-faint">
+                    GitHub
+                  </span>
+                )}
                 {p.repos?.map((r) => (
                   <a
                     key={r.href}
@@ -45,10 +50,7 @@ export default function Projects() {
 
             <ul className="mt-5 flex flex-wrap gap-2">
               {p.tags.map((tag) => (
-                <li
-                  key={tag}
-                  className="font-mono text-xs text-ink-faint"
-                >
+                <li key={tag} className="font-mono text-xs text-ink-faint">
                   #{tag}
                 </li>
               ))}
@@ -57,5 +59,5 @@ export default function Projects() {
         ))}
       </div>
     </Section>
-  )
+  );
 }
