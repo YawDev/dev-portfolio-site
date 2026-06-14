@@ -1,0 +1,12 @@
+{
+  // Cloudflare Workers + Static Assets config.
+  // `npm run build` outputs to ./dist, which is served as static assets.
+  "name": "dev-portfolio-site",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./dist",
+    // SPA: serve index.html (200) for any unmatched path so client-side
+    // routes and hard refreshes don't 404.
+    "not_found_handling": "single-page-application"
+  }
+}
