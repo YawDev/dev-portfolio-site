@@ -103,6 +103,8 @@ export type Project = {
   // One or more source repos (e.g. API + Web).
   repos?: RepoLink[];
   demo?: string;
+  // Optional preview screenshot in /public.
+  image?: string;
 };
 
 export const projects: Project[] = [
@@ -132,6 +134,8 @@ export const projects: Project[] = [
         href: "https://github.com/YawDev/personal-blog-site",
       },
     ],
+    demo: "https://personal-blog-yaw-dev.vercel.app/",
+    image: "/blog-preview.png",
   },
   {
     title: "Todo — Full-Stack (Go + React)",
@@ -151,5 +155,7 @@ export const projects: Project[] = [
       { label: "Backend", href: "https://github.com/YawDev/todo-web-api" },
       { label: "Frontend", href: "https://github.com/YawDev/todo-app-react" },
     ],
+    demo: "https://todo-manager-yaw-dev.vercel.app/",
+    image: "/todo-preview.png",
   },
 ];

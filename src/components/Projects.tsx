@@ -7,7 +7,23 @@ export default function Projects() {
     <Section id="projects" index="03" title="projects">
       <div className="grid gap-6 sm:grid-cols-2">
         {projects.map((p) => (
-          <article key={p.title} className="glow-card flex flex-col p-6">
+          <article key={p.title} className="glow-card flex flex-col overflow-hidden p-6">
+            {p.image && (
+              <a
+                href={p.demo ?? p.image}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${p.title} preview`}
+                className="-mx-6 -mt-6 mb-5 block border-b border-white/5"
+              >
+                <img
+                  src={p.image}
+                  alt={`${p.title} preview`}
+                  loading="lazy"
+                  className="aspect-[16/10] w-full object-cover object-left-top transition-transform duration-300 hover:scale-[1.02]"
+                />
+              </a>
+            )}
             <div className="mb-4 flex items-center justify-between">
               <Icon name="external" className="h-7 w-7 text-accent" />
               <div className="flex items-center gap-3">
